@@ -1,0 +1,18 @@
+Заказ (Order)
+ - ID (String, final)
+ - Ф.И. заказчика (String)
+ - clientPhoneNumber(String)
+ - regNumber (String)
+ - nameOfService (String)
+ - termin (LocalDateTime)
+ - orderStatus(boolean)
+
+ Menu
+ 1. Получить все заказы
+ 2. Показать след.заказ
+ 3. Сформировать заказы по дате
+ 4.
+ Methods
+  - changeOil();
+  -
+
