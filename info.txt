@@ -1,0 +1,17 @@
+Заказ (Order)
+ - ID (String, final)
+ - Ф.И. заказчика (String)
+ - clientPhoneNumber(String) - добавить поле!
+ - regNumber (String)
+ - nameOfService (String)
+ - termin (LocalDateTime)
+ - orderStatus(boolean)
+
+ Menu
+ 1. Получить все заказы
+ 2. Показать след.заказ
+ 3. Сортировка заказов по дате
+ 4. Создать новый заказ (через Сканер) - ввод данных
+ 5. Change order status (changeOrderStatus();)
+ 6. Вывести выполненные заказы (showCompletedOrders();)
+ 7. Завершение работы программы (System.exit)

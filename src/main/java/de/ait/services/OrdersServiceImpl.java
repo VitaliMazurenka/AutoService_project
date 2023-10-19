@@ -1,5 +1,6 @@
 package de.ait.services;
 
+import de.ait.dto.OrderDto;
 import de.ait.models.Order;
 import de.ait.repositories.OrdersRepository;
 
@@ -32,5 +33,10 @@ public class OrdersServiceImpl implements OrdersService {
             .min(Comparator.comparing(Order::getTermin)).orElseGet(()->null);
 
     return nextOrder != null ? nextOrder.toString() : null;
+  }
+  // принимает OrderDto
+  public void add(OrderDto orderDto){
+
+
   }
 }
