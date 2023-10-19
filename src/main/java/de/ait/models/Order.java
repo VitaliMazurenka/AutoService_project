@@ -10,12 +10,13 @@ public class Order {
     private LocalDateTime termin;
     private boolean orderStatus;
 
-    public Order(String id, String name, String regNumber, String nameOfService, String termin) {
+    public Order(String id, String name, String regNumber, String nameOfService, String termin, boolean orderStatus) {
         this.id = id;
         this.name = name;
         this.regNumber = regNumber;
         this.nameOfService = nameOfService;
         this.termin = LocalDateTime.parse(termin);
+        this.orderStatus = orderStatus;
 
     }
 
@@ -54,4 +55,5 @@ public class Order {
                 ", orderStatus=" + orderStatus +
                 '}';
     }
+
 }

@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface OrdersRepository {
   public List<Order> findAll();
+
+  void saveOrder(Order order);
+
 }
