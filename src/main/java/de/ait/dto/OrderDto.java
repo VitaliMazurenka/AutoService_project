@@ -12,7 +12,7 @@ public class OrderDto {
     private LocalDateTime termin;
     private boolean orderStatus;
 
-    public OrderDto( String name, String regNumber, String nameOfService, String termin) {
+    public OrderDto(String name, String regNumber, String nameOfService, String termin) {
 
         this.name = name;
         this.regNumber = regNumber;
@@ -21,7 +21,7 @@ public class OrderDto {
 
     }
 
-       public String getName() {
+    public String getName() {
         return name;
     }
 
@@ -43,13 +43,13 @@ public class OrderDto {
 
     @Override
     public String toString() {
-        return "Order{" +
-                ", name='" + name + '\'' +
-                ", regNumber='" + regNumber + '\'' +
-                ", nameOfService='" + nameOfService + '\'' +
-                ", termin=" + termin +
-                ", orderStatus=" + orderStatus +
-                '}';
+        return '\n' +
+                "Имя заказчика" + " : " + name + '\n' +
+                "Рег. номер" + " : " + regNumber + '\n' +
+                "Наименование работ" + " : " + nameOfService + '\n' +
+                "Дата" + " : " + termin + '\n' +
+                "Статус заказа" + " : " + orderStatus + '\n'
+                + "======================================";
     }
 
 }

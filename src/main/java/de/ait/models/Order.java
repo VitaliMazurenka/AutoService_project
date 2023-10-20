@@ -74,14 +74,13 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", regNumber='" + regNumber + '\'' +
-                ", nameOfService='" + nameOfService + '\'' +
-                ", termin=" + termin +
-                ", orderStatus=" + orderStatus +
-                '}';
+        return '\n' + "Id заказа" + " : " + id + '\n' +
+                "Имя заказчика" + " : " + name + '\n' +
+                "Рег. номер" + " : " + regNumber + '\n' +
+                "Наименование работ" + " : " + nameOfService + '\n' +
+                "Дата" + " : " + termin + '\n' +
+                "Статус заказа" + " : " + orderStatus+'\n'
+                +"======================================";
     }
 
 }

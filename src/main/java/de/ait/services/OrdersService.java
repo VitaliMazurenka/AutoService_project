@@ -13,4 +13,6 @@ public interface OrdersService {
 
   List<Order> getOrders();
 
+  List<Order> getSortedOrders();
+
 }

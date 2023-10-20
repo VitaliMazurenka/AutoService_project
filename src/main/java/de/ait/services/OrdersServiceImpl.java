@@ -60,29 +60,12 @@ public class OrdersServiceImpl implements OrdersService {
     public List<Order> getOrders() {
         return ordersRepository.findAll();
     }
-   /* public static List<Order> readFile(String nameFile) {
-        List<Order> result = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(nameFile))) {
-            Order dataOrder = new Order();
-            while ((dataOrder = br.readLine()) != null) {
-                result.add(dataOrder);
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return result;
-    }
-    public void sortByDate(List<Order> orders ){
-            List<Order> list = readFile("orders.txt");
-            LocalDateTime now = LocalDateTime.now();
-            Order sortedOrders = list.stream()
-                    .filter(o -> o.getTermin().isAfter(now))
-                    .min(Comparator.comparing(Order::getTermin)).orElseGet(() -> null);
 
-        }
-    */
+    @Override
+    public List<Order> getSortedOrders() {
+        return ordersRepository.findAll().stream()
+                .sorted(Comparator.comparing(Order::getTermin)).toList();
+    }
 
 }
 

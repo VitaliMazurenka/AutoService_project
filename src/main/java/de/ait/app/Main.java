@@ -39,7 +39,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Сортировка заказов по дате");
-//          здесь напишем код
+                    System.out.println(ordersService.getSortedOrders().toString());
                     break;
                 case 4:
                     System.out.println("Создать новый заказ");
