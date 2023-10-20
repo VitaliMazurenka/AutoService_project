@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 //    конфигурируем приложение - с какими Impl будем работать
-       // OrdersRepository ordersTestRepository = new OrdersRepositoryListImpl();
+        // OrdersRepository ordersTestRepository = new OrdersRepositoryListImpl();
         OrdersRepository ordersTextFileRepository =
                 new OrdersRepositoryTextImpl("orders.txt");
         OrdersService ordersService =
@@ -24,9 +24,7 @@ public class Main {
             System.out.println("2. Показать след.заказ");
             System.out.println("3. Показать заказы сортированные по дате");
             System.out.println("4. Создать новый заказ");
-            System.out.println("5. Вывести возраст самого высокого");
-            System.out.println("6. Вывести имя и фамилию самого низкого пользователя");
-            System.out.println("7. Выход");
+            System.out.println("5. Выход");
             int command = scanner.nextInt(); // считываем команду
             scanner.nextLine(); // чтобы не было бага со сканером
 //    вызываем соответствующие "процессы" в нашей программе
@@ -56,19 +54,11 @@ public class Main {
                     String dateStr = scanner.nextLine();
                     System.out.println("Введите желаемое время...");
                     String timeStr = scanner.nextLine();
-                    OrderDto orderDto = new OrderDto(nameStr, regNumberStr, typeOfServiceStr, dateStr+"T"+timeStr);
+                    OrderDto orderDto = new OrderDto(nameStr, regNumberStr, typeOfServiceStr, dateStr + "T" + timeStr);
                     ordersService.add(orderDto);
                     scanner.nextLine();
                     break;
                 case 5:
-                    System.out.println("...");
-//          здесь напишем код
-                    break;
-                case 6:
-                    System.out.println("...");
-//          здесь напишем код
-                    break;
-                case 7:
                     System.out.println("Выходим из программы заказов");
                     System.exit(0);
                     break;

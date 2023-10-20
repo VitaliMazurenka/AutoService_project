@@ -43,7 +43,7 @@ public class OrdersServiceImpl implements OrdersService {
 
     // принимает OrderDto
     @Override
-    public void add(OrderDto orderDto) {
+    public Order add(OrderDto orderDto) {
         Order order = new Order(
                 UUID.randomUUID().toString(),
                 orderDto.getName(),
@@ -53,6 +53,12 @@ public class OrdersServiceImpl implements OrdersService {
                 orderDto.isOrderStatus()
         );
         ordersRepository.saveOrder(order);
+        return order;
+    }
+
+    @Override
+    public List<Order> getOrders() {
+        return ordersRepository.findAll();
     }
    /* public static List<Order> readFile(String nameFile) {
         List<Order> result = new ArrayList<>();
